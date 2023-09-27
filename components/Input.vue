@@ -81,6 +81,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   left: 0;
   right: 0;
   top: 0;
+  padding: 16px;
   width: auto;
 }
 input::-webkit-outer-spin-button,
