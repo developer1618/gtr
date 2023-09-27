@@ -18,7 +18,6 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@/assets/css/tailwind.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -41,8 +40,6 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
-    "@nuxtjs/auth-next",
-    "@nuxtjs/i18n",
   ],
   moment: {
     locales: ["ru"],
@@ -59,5 +56,6 @@ export default {
   build: {
     transpile: ["vee-validate"],
   },
+  buildModules: ['@nuxtjs/tailwindcss'],
   // buildModules: ["@nuxtjs/dotenv"],
 };

@@ -61,7 +61,7 @@
               :key="list.id"
               class="flex justify-start items-start gap-x-2"
             >
-              <img :src="list.url" />
+              <img :src="require(`@/assets/icons${list.url}`)" alt="Test" />
               <span>{{ list.title }}</span>
             </li>
             <li class="col-end-3 flex justify-end">
@@ -223,32 +223,32 @@ export default {
         post: [
           {
             id: 1,
-            url: "/icons/list1.svg",
+            url: "/list1.svg",
             title: `Бесплатная  общественная парковка поблизости`,
           },
           {
             id: 2,
-            url: "/icons/wifi.svg",
+            url: "/wifi.svg",
             title: "Бесплатный WiFi",
           },
           {
             id: 3,
-            url: "/icons/list3.svg",
+            url: "/list3.svg",
             title: "Бассейн",
           },
           {
             id: 4,
-            url: "/icons/list4.svg",
+            url: "/list4.svg",
             title: "Бесплатный завтрак",
           },
           {
             id: 5,
-            url: "/icons/list5.svg",
+            url: "/list5.svg",
             title: "Трансфер из/до аэропорта",
           },
           {
             id: 6,
-            url: "/icons/list6.svg",
+            url: "/list6.svg",
             title: "Терраса на крыше",
           },
         ],
