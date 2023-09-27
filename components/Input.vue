@@ -80,7 +80,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   bottom: 0;
   left: 0;
   right: 0;
-  top: 0;
+  /* top: 0; */
   width: auto;
 }
 input::-webkit-outer-spin-button,
