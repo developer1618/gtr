@@ -100,7 +100,8 @@
             <h2 class="my-4">Рейтинг по отзывам</h2>
             <div class="flex gap-x-2">
               <Mark
-                v-for="to in marks"
+                v-for="(to,id) in marks"
+                :key="id"
                 class="px-4 py-3 bg-black"
                 @click="toMark(to)"
                 :secondClass="
@@ -236,7 +237,8 @@
             <h2 class="my-4">Рейтинг по отзывам</h2>
             <div class="flex gap-x-2">
               <Mark
-                v-for="to in marks"
+                v-for="(to,id) in marks"
+                :key="id"
                 class="px-4 py-3"
                 @click="toMark(to)"
                 :secondClass="

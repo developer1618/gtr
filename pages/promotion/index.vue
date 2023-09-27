@@ -113,7 +113,7 @@
           </div>
           <div class="mb-16">
             <div class="flex gap-7 my-5">
-              <div v-for="to in news">{{ to }}</div>
+              <div v-for="(to,id) in news" :key="id">{{ to }}</div>
             </div>
             <p class="text-zero">{{ tour.info }}</p>
           </div>
