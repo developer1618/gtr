@@ -55,7 +55,7 @@
             </div>
           </div>
           <h1 class="mt-4 font-medium mb-2">{{ lists.title }}</h1>
-          <ul class="list-l">
+          <ul class="list-l pb-4">
             <li
               v-for="list in lists.post"
               :key="list.id"
@@ -64,12 +64,12 @@
               <img :src="require(`@/assets/icons${list.url}`)" alt="Test" />
               <span>{{ list.title }}</span>
             </li>
-            <li class="col-end-3 flex justify-end">
+            <!-- <li class="col-end-3 flex justify-end">
               <a
                 class="font-medium pb-3 col-span-2 hover:underline cursor-pointer text-blueZero"
                 >Показать еще</a
               >
-            </li>
+            </li> -->
           </ul>
           <div
             class="l-bottom pt-5 flex justify-between border-t-1 border-secondary-2"
@@ -209,7 +209,7 @@ export default {
       arm: "",
       imgs: [],
       zero: false,
-      url: "/icons/list1.svg",
+      url: "/list1.svg",
       title: "Главная",
       tours: "Отели",
       button: "Найти номер",

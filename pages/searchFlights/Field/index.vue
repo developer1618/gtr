@@ -329,7 +329,7 @@ export default {
     },
     async onCost() {
       await this.$axios
-        .post(`https://gtravel.artesia.tj/checkFlightOfferPrice/`, {
+        .post(`https://85.92.110.99:7496/checkFlightOfferPrice/`, {
           data: {
             type: "flight-offers-pricing",
             flightOffers: [JSON.parse(this.$route.query.data)],
@@ -337,7 +337,7 @@ export default {
         })
         .then((res) => {
           this.$axios
-            .post(`https://gtravel.artesia.tj/createFlightOrder/ `, {
+            .post(`https://85.92.110.99:7496/createFlightOrder/ `, {
               data: {
                 type: "flight-order",
                 flightOffers: [res.data.data.flightOffers[0]],

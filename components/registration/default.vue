@@ -110,14 +110,14 @@
                     class="absolute inset-y-0 right-0 pr-3 pt-3 flex items-center text-sm"
                   >
                     <img
-                      src="/icons/eye-pass-on.svg"
+                      src="@/assets/icons/eye-pass-on.svg"
                       v-if="typePassword"
                       @click="typePassword = !typePassword"
                       alt="on"
                       class="cursor-pointer"
                     />
                     <img
-                      src="/icons/eye-pass-off.svg"
+                      src="@/assets/icons/eye-pass-off.svg"
                       v-else
                       alt="off"
                       @click="typePassword = !typePassword"

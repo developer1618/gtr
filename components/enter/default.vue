@@ -36,7 +36,7 @@
                   formEnterInfo.login
                 }}</label>
                 <input
-                  type="text"
+                  type="email"
                   v-model="data.email"
                   id="text"
                   placeholder="Введите Логин"
@@ -63,17 +63,17 @@
                   class="bg-secondary px-5 rounded outline-none w-full h-13 mt-2"
                 />
                 <div
-                  class="absolute inset-y-0 right-0 pr-3 pt-3 flex items-center text-sm"
+                  class="absolute inset-y-0 right-0 pr-3 pt-6 flex items-center text-sm"
                 >
                   <img
-                    src="/icons/eye-pass-on.svg"
+                    src="@/assets/icons/eye-pass-on.svg"
                     v-if="typePassword"
                     @click="typePassword = !typePassword"
                     alt="on"
                     class="cursor-pointer"
                   />
                   <img
-                    src="/icons/eye-pass-off.svg"
+                    src="@/assets/icons/eye-pass-off.svg"
                     v-else
                     alt="off"
                     @click="typePassword = !typePassword"
@@ -127,7 +127,7 @@
         <div v-if="isEntry === 'forgot'">
           <ValidationObserver v-slot="{ handleSubmit }">
             <form @submit.prevent="handleSubmit(forgotPass)">
-              <p class="text-zero mt-5 mb-2">Укожите адрес электронной почты</p>
+              <p class="text-zero mt-5 mb-2">Укажите адрес электронной почты</p>
               <ValidationProvider v-slot="{ errors }" rules="require|email">
                 <div>
                   <Input
@@ -238,29 +238,18 @@ export default {
     },
     async postUser() {
       await this.$axios
-        .post(`http://gtravel.artesia.tj/api/login/`, this.data)
+        .post(`http://85.92.110.99:7496/api/login/`, this.data)
         .then((response) => {
           console.log(response);
-          // let user = {
-          //   id: response.data.id,
-          //   username: response.data.username,
-          //   full_name: response.data["full name"],
-          //   email: response.data.email,
-          //   phone: response.data.phone,
-          //   companyname: response.data.companyname,
-          //   photo: response.data.photo,
-          //   country: response.data.country,
-          //   city: response.data.city,
-          //   street: response.data.street,
-          // };
           localStorage.setItem("token", response.data.access);
           localStorage.setItem("id", response.data.id);
-          window.location.reload();
+          window.location.href = "profile";
         })
         .catch((err) => {
           this.error = "Неправильный логин или пароль";
         });
     },
+
     async goToProfilePage() {},
     forgotPass() {
       this.isEntry = "forgot2";

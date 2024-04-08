@@ -83,7 +83,7 @@
           <Button type="secondary" secondClass="w-40">{{ button }}</Button>
         </div>
         <div v-if="blocks[0] === 'Отели'">
-          <div class="bg-white shadow-3xl rounded-xl py-4 px-7">
+          <div class="bg-white shadow-3xl rounded-xl py-4 px-7 mt-8">
             <div class="mb-3 flex gap-2">
               <Mark class="w-12 h-12">4.5</Mark>
               <div>
@@ -97,15 +97,16 @@
               </div>
             </div>
             <div class="flex justify-between">
-              <div class="flex gap-3">
+              <!-- <div class="flex gap-3">
                 <div v-for="item in hotel.itemLeft" class="flex gap-3">
                   <img :src="item.icon" alt="Icon" />
                   <span class="text-zero">{{ item.text }}</span>
                 </div>
-              </div>
+              </div> -->
               <div class="flex gap-3">
                 <div v-for="item in hotel.item" class="flex gap-2">
-                  <img class="w-3" :src="item.icon" alt="Icon" />
+                  <img class="w-3" :src="require(`@/assets/icons${item.icon}`)" alt="Icon" />
+                  <!-- <img :src="require(`@/assets/icons${list.url}`)" alt="Test" /> -->
                   <span class="text-zero">{{ item.text }}</span>
                 </div>
               </div>
@@ -113,7 +114,7 @@
           </div>
           <div class="mb-16">
             <div class="flex gap-7 my-5">
-              <div v-for="(to,id) in news" :key="id">{{ to }}</div>
+              <div v-for="to in news">{{ to }}</div>
             </div>
             <p class="text-zero">{{ tour.info }}</p>
           </div>
@@ -201,31 +202,32 @@ export default {
         text: "Caldera Cliffs, Fira, 84 700, Santorini",
         star: 4,
         itemLeft: [
-          {
-            icon: "/icons/list1.svg",
-            text: "Бесплатная общественная парковка поблизости",
-          },
-          {
-            icon: "/icons/wifi.svg",
-            text: "Бесплатный WiFi",
-          },
+
         ],
         item: [
           {
+            icon: "/list1.svg",
+            text: "Бесплатная общественная парковка поблизости",
+          },
+          {
+            icon: "/wifi.svg",
+            text: "Бесплатный WiFi",
+          },
+          {
             text: "Бассейн",
-            icon: "/icons/list3.svg",
+            icon: "/list3.svg",
           },
           {
             text: "Трансфер из/до аэропорта",
-            icon: "/icons/list4.svg",
+            icon: "/list4.svg",
           },
           {
             text: "Бесплатный завтрак",
-            icon: "/icons/list5.svg",
+            icon: "/list5.svg",
           },
           {
             text: "Терраса на крыше",
-            icon: "/icons/list6.svg",
+            icon: "/list6.svg",
           },
         ],
       },

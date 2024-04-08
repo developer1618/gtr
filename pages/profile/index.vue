@@ -403,12 +403,13 @@
       <div class="profile pt-6 pb-8 px-2 sm:px-6 w-full xl:w-auto">
         <div class="flex gap-4 mb-8 items-center">
           <div>
-            <img
+            <!-- <img
               :src="auth.photo"
               :alt="user.avatar.alt"
               width="155"
               height="155"
-            />
+            /> -->
+            <img src="https://futureoflife.org/wp-content/uploads/2020/08/elon_musk_royal_society.jpg" width="150">
           </div>
           <div>
             <div class="name pt-2 pb-4">
@@ -580,7 +581,7 @@ export default {
       ],
       user: {
         avatar: {
-          src: "/images/images2.jpg",
+          src: "images/images2.jpg",
           alt: "Images 2",
         },
         surname: "Мухамадназаров",

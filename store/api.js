@@ -83,7 +83,7 @@ export const actions = {
         `${
           !payload.isTrue
             ? this.$axios.defaults.baseURL
-            : "https://gtravel.artesia.tj"
+            : "https://85.92.110.99:7496"
         }${payload.request}`
       );
       payload.body = res.data;

@@ -90,11 +90,11 @@
           >
             {{ headerInfo.registrationButton }}
           </Button>
-          <div class="w-10 h-13 rounded-stand cursor-pointer" v-if="user">
+          <div class="w-12 rounded-stand cursor-pointer" v-if="user">
             <NuxtLink to="/profile">
               <img
-                class="w-full h-full"
-                :src="user?.photo !== null ? user.photo : `/images/user.svg`"
+                class="w-full h-full rounded-full"
+                :src="user?.photo !== null ? user.photo : `https://futureoflife.org/wp-content/uploads/2020/08/elon_musk_royal_society.jpg`"
                 alt="User photo"
               />
             </NuxtLink>

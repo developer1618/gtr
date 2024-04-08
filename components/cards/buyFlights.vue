@@ -12,7 +12,7 @@
         <div class="w-1/5 py-7 flex sm:block">
           <img
             :src="
-              `https://gtravel.artesia.tj/${img}.png` || buyflightsImg.img.src
+              `https://85.92.110.99:7496/${img}.png` || buyflightsImg.img.src
             "
             :alt="buyflightsImg.img.alt"
             class="m-auto"

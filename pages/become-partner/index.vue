@@ -29,6 +29,7 @@
                     class="mt-0 mob-inp"
                     :label="partnerFormInfo.labels.nameCompany"
                     labelStyle="text-secondary-2"
+                    sw
                   />
                 </ValidationProvider>
               </div>

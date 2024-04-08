@@ -2,7 +2,7 @@
   <footer class="text-white">
     <div class="content bg-dark-black pt-7 sm:pt-0">
       <div
-        class="xl:container md:container ls sm:container 2xl:container mob-ver mob-cont flex-wrap mx-auto pt-16 pb-43 flex gap-y-4 justify-between px-4"
+        class="xl:container md:container ls sm:container 2xl:container mob-ver mob-cont flex-wrap mx-auto py-24 flex gap-y-4 justify-between px-4"
       >
         <div class="connection">
           <div class="title">
